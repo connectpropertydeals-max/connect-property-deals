@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section" style="padding-top:34px"><div class="container"><h2>Browse Listings</h2><form class="searchbar" method="get"><input type="text" name="q" value="{{ q }}" placeholder="Search by city, title, or type"><button class="btn btn-dark" type="submit">Search</button></form><div class="grid grid-3" style="margin-top:20px">{% for item in listings %}<a class="card" href="{{ url_for('listing_detail', listing_id=item.id) }}"><div class="image"></div><div style="margin-top:14px" class="badge">{{ item.tag }}</div><h3 style="margin:4px 0">{{ item.title }}</h3><div class="muted">{{ item.city }}</div><p style="font-weight:800;font-size:1.2rem">{{ item.price }}</p><div class="meta"><span>{{ item.beds }} bd</span><span>{{ item.baths }} ba</span><span>{{ item.sqft }} sqft</span><span>{{ item.type }}</span></div></a>{% endfor %}</div></div></section>
+{% endblock %}
