@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Property Deals</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header class="topbar"><div class="container nav"><a href="{{ url_for('home') }}" class="brand"><div class="logo">CPD</div><div>Connect Property Deals</div></a><nav class="navlinks"><a href="{{ url_for('home') }}">Home</a><a href="{{ url_for('listings') }}">Listings</a><a href="{{ url_for('agents') }}">Agents</a><a href="{{ url_for('sell') }}">Sell</a><a href="{{ url_for('buyers') }}">Buyers</a><a href="{{ url_for('pricing') }}">Pricing</a><a href="{{ url_for('dashboard') }}">Dashboard</a></nav></div></header>
+{% block content %}{% endblock %}
+<footer class="footer"><div class="container">Connect Property Deals · Search homes · Find agents · Connect deals worldwide</div></footer>
+</body>
+</html>
