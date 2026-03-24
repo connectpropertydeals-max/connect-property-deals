@@ -1,4 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="section" style="padding-top:34px"><div class="container"><h2>Agent Directory</h2><div class="grid grid-3">{% for agent in agents %}<div class="card"><div class="image" style="height:120px"></div><div style="margin-top:14px" class="badge">{{ agent.plan }}</div><h3 style="margin:4px 0">{{ agent.name }}</h3><div class="muted">{{ agent.market }}</div><p>{{ agent.specialty }}</p><button class="btn btn-dark" style="width:100%">Contact Agent</button></div>{% endfor %}</div></div></section>
-{% endblock %}
